@@ -450,3 +450,33 @@ _*Parametro obligatorio_
 |                | `{protegm_status:false,msg:'Ha ocurrido un error dentro del modo PROTEGM'}`  |
 
 _*Parametro obligatorio_
+
+**Cuestionarios**
+----
+| Titulo      | Obtener Cuestionario activo | 
+| :------------ |:---------------    | 
+| URL         | `/services/cuestionario` |
+| Metodo      | **GET**             |
+| Parametros  | `token[string]*`    |
+| Success Response | `{"titulo": "--","preguntas": {"pregunta 1": "--?",        "pregunta 2": "---","pregunta 3": "---","pregunta 4": "---" },"id": "-","status": true }`  |
+| Error Response | `{error_msg':'Faltan Parametros Obligatorios'}`  |
+|                | `{error_msg:'El token es incorrecto'}`  |
+|                | `{"msg": "Encuesta previamente contestada","status": false }`|
+
+_*Parametro obligatorio_
+
+| Titulo      | Guardar Respuestas| 
+| :------------ |:---------------    | 
+| URL         | `/services/cuestionario` |
+| Metodo      | **POST**             |
+| Parametros  | `token[string]*`    |
+|             | `contestado[boolean]*`    |
+|             | `cuestionario[string]*`    |
+|             | `respuestas[JSON]`    |
+| Success Response | `{ "msg": "Gracias por participar", "status": true }`  |
+| Error Response | `{error_msg':'Faltan Parametros Obligatorios'}`  |
+|                | `{error_msg:'El token es incorrecto'}`  |
+|                | `{"msg": "Encuesta previamente contestada","status": false}`  |
+|                | `{error_msg:Ha ocurrido un error :( }`  |
+
+_*Parametro obligatorio_
