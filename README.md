@@ -480,3 +480,17 @@ _*Parametro obligatorio_
 |                | `{error_msg:Ha ocurrido un error :( }`  |
 
 _*Parametro obligatorio_
+
+**Metricas**
+----
+| Titulo      | Actualizar Visita (Home) | 
+| :------------ |:---------------    | 
+| URL         | `/services/metricas/home` |
+| Metodo      | **POST**             |
+| Parametros  | `token[string]*`    |
+| Success Response | `{"msg": "Metrica actualizada","status": true }`  |
+| Error Response | `{error_msg':'Faltan Parametros Obligatorios'}`  |
+|                | `{"msg": "Metrica no actualizada","status": false }`|
+
+_*Parametro obligatorio_
+
