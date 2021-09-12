@@ -396,7 +396,7 @@ _*Parametro obligatorio_
 |             | `lng_actual[string]*`   |
 |             | `lat_destino[string]*`   |
 |             | `lng_destino[string]*`   |
-|             | `contacto[string]*`   |
+|             | `contacto[string]`   |
 | Success Response | `{protegm_status:true,protegm_token:'----',msg:'Haz habilitado el modo PROTEGM'}`  |
 | Error Response | `{error_msg:'Faltan Parametros Obligatorios'}`  |
 |                | `{error_msg:'El token es incorrecto'}`  |
