@@ -385,19 +385,18 @@ _*Parametro obligatorio_
 
 _*Parametro obligatorio_
 
-**Modo Protegm**
+**Modo Protegm V2**
 ----
 | Titulo      | Iniciar | 
 | :------------ |:---------------    | 
-| URL         | `/services/protegm/on` |
+| URL         | `/services/protegm_v2/on` |
 | Metodo      | **POST**             |
 | Parametros  | `token[string]*`    |
 |             | `lat_actual[string]*`   |
 |             | `lng_actual[string]*`   |
 |             | `lat_destino[string]*`   |
 |             | `lng_destino[string]*`   |
-|             | `contacto[string]`   |
-| Success Response | `{protegm_status:true,protegm_token:'----',msg:'Haz habilitado el modo PROTEGM'}`  |
+| Success Response | `{protegm_status:true,url:'https://multisistemas.com.mx/protegm/mapa.php?protegm_token=********',msg:'Haz habilitado el modo PROTEGM'}`  |
 | Error Response | `{error_msg:'Faltan Parametros Obligatorios'}`  |
 |                | `{error_msg:'El token es incorrecto'}`  |
 |                | `{protegm_status:false,msg:'Ha ocurrido un error al iniciar el modo PROTEGM'}`  |
@@ -407,7 +406,7 @@ _*Parametro obligatorio_
 
 | Titulo      | Terminar  | 
 | :------------ |:---------------    | 
-| URL         | `/services/protegm/off` |
+| URL         | `/services/protegm_v2/off` |
 | Metodo      | **POST**             |
 | Parametros  | `token[string]*`    |
 | Success Response | `{protegm_status:false,msg:'El modo PROTEGM ya se encuentra deshabilitado!!!'}`  |
@@ -421,7 +420,7 @@ _*Parametro obligatorio_
 
 | Titulo      | Actualizar posición actual  | 
 | :------------ |:---------------    | 
-| URL         | `/services/protegm/position` |
+| URL         | `/services/protegm_v2/position` |
 | Metodo      | **POST**             |
 | Parametros  | `token[string]*`    |
 |             | `latitud[string]*`    |
@@ -431,22 +430,6 @@ _*Parametro obligatorio_
 |                | `{error_msg:'El token es incorrecto'}`  |
 |                | `{protegm_status:false,msg:'Asegurate que el modo PROTEGM este habilitado'}`  |
 |                | `{protegm_status:false,msg:'Ha expirado el tiempo para el modo PROTEGM'}`  |
-|                | `{protegm_status:false,msg:'Ha ocurrido un error dentro del modo PROTEGM'}`  |
-
-_*Parametro obligatorio_
-
-| Titulo      | Obtener ultima posición  | 
-| :------------ |:---------------    | 
-| URL         | `/services/protegm/position` |
-| Metodo      | **GET**             |
-| Parametros  | `token[string]*`    |
-|             | `protegm_token[string]*`    |
-| Success Response | `{protegm_status:true,data:{emisor:'----',contacto:'----',ultima_posicion:{latitud:'--',longitud:'--',fecha:'--'},inicio:{latitud:'--',longitud:'--'},destino:{latitud:'--',longitud:'--'}}}`|
-| Error Response | `{error_msg:'Faltan Parametros Obligatorios'}`  |
-|                | `{error_msg:'El token es incorrecto'}`  |
-|                | `{protegm_status:false,msg:'Asegurate que el modo PROTEGM este habilitado'}`  |
-|                | `{protegm_status:false,msg:'Ha expirado el tiempo para el modo PROTEGM'}`  |
-|                | `{protegm_status:false,msg:'El token PROTEGM es incorrecto'}`  |
 |                | `{protegm_status:false,msg:'Ha ocurrido un error dentro del modo PROTEGM'}`  |
 
 _*Parametro obligatorio_
