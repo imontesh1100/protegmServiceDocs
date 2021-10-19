@@ -392,6 +392,8 @@ _*Parametro obligatorio_
 | URL         | `/services/protegm_v2/on` |
 | Metodo      | **POST**             |
 | Parametros  | `token[string]*`    |
+|             | `lat_inicio[string]*`   |
+|             | `lng_inicio[string]*`   |
 |             | `inicio[string]*`   |
 |             | `destino[string]*`   |
 | Success Response | `{protegm_status:true,url:'https://multisistemas.com.mx/protegm/mapa.php?protegm_token=********',msg:'Haz habilitado el modo PROTEGM'}`  |
