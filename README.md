@@ -56,6 +56,18 @@ _*Parametro obligatorio_
 
 _*Parametro obligatorio_
 
+| Titulo      | Eliminar usuario  | 
+| :------------ |:---------------   | 
+| URL         | `/services/usuario/eliminar`   |
+| Metodo      | **POST**             |
+| Parametros  | `token[string]*`    |
+| Success Response | `{is_deleted:true,msg:'*****'}`  |
+| Error Response | `{error_msg':'Faltan Parametros Obligatorios}`  |
+|                | `{error_msg:'******',is_deleted:false}`  |
+|                | `{error_msg:'Ha ocurrido un error',is_deleted:false}`  |
+
+_*Parametro obligatorio_
+
 | Titulo      | Informacion del usuario  | 
 | :------------ |:---------------   | 
 | URL         | `/services/usuario/informacion`   |
